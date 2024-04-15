@@ -82,6 +82,7 @@ public class Server {
 					
 				} catch (Exception e) {
 					callback.accept("Client #" + count + " has disconnected");
+					e.printStackTrace();
 					clients.remove(this);
 					break;
 				}
@@ -164,10 +165,14 @@ public class Server {
 
 		private void dealPlayerHand() {
 			state.phase = "displayPlayer";
-
-			dealer.shuffleDeck();
-			state.playerHand = dealer.dealHand();
-			callback.accept("Player's hand: " + state.playerHand.get(0).cardString() + " " + state.playerHand.get(1).cardString() + " " + state.playerHand.get(2).cardString());
+			try {
+				dealer.shuffleDeck();
+				state.playerHand = dealer.dealHand();
+				callback.accept("Player's hand: " + state.playerHand.get(0).cardString() + " " + state.playerHand.get(1).cardString() + " " + state.playerHand.get(2).cardString());
+			} catch (Exception e) {
+				callback.accept("Could not deal hand to client #" + count);
+				e.printStackTrace();
+			}
 
 			try {
 				out.writeObject(state);

@@ -35,6 +35,8 @@ public class Dealer {
   // the bottom of the new deck, repeating until no cards remain in old deck.
   //
   public void shuffleDeck() {
+    if (deck == null || deck.size() == 0)
+      generateDeck();
     int size = deck.size();
     ArrayList<Card> newDeck = new ArrayList<>(size);
 
