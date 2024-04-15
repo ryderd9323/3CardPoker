@@ -1,0 +1,7 @@
+- Consolidate UI functions
+	- Make foldBtn trigger clientConnection.foldPlayHand(state)
+	- Overload updateClientUI depending on GameState
+	- Implement playBtn
+	- Hand evaluation
+	- Hand comparison
+	- Payout evaluation
