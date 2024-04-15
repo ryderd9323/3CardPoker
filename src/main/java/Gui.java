@@ -318,6 +318,8 @@ public class Gui extends Application {
 		menuBar.getMenus().add(options);
 
 		// Dealer hand area
+		dealerArea = new VBox(8);
+
 		dealerHandText = new Text("Dealer Hand");
 		dealerHandText.setStyle("-fx-font-size: 64");
 		dealerHandText.setFill(Color.WHITE);
@@ -331,6 +333,7 @@ public class Gui extends Application {
 				add(new ImageView("cardBack.jpg"));
 			}
 		};
+
 		for (ImageView im : dealerViewList) {
 			im.setPreserveRatio(true);
 			im.setFitWidth(90);
@@ -341,8 +344,14 @@ public class Gui extends Application {
 		dealerCardBox.setAlignment(Pos.CENTER);
 		dealerCardBox.getChildren().addAll(dealerViewList);
 
+		displayDealerHand(null);
+
+		dealerArea.getChildren().addAll(dealerHandText, dealerCardBox);
+		dealerArea.setAlignment(Pos.CENTER);
+		/*
 		dealerArea = new VBox(8, dealerHandText, dealerCardBox);
 		dealerArea.setAlignment(Pos.CENTER);
+		*/
 
 		// Player Area - contains wager boxes, winning box, 
 		wagerGrid = createwagerGrid();
@@ -364,14 +373,6 @@ public class Gui extends Application {
 				add(new ImageView());
 			}
 		};
-
-		//playerViewList = new ArrayList<>() {
-		//	{
-		//		add(new ImageView("cardBack.jpg"));
-		//		add(new ImageView("cardBack.jpg"));
-		//		add(new ImageView("cardBack.jpg"));
-		//	}
-		//};
 		
 		for (ImageView im : playerViewList) {
 			im.setPreserveRatio(true);
@@ -432,11 +433,17 @@ public class Gui extends Application {
 			messageText.setText("New hand!");
 		}
 
-		if (state.phase.equals("displayPlayer")) {
+		else if (state.phase.equals("displayPlayer")) {
 			displayPlayerHand(state.playerHand);
 			foldBtn.setDisable(false);
 			playBtn.setDisable(false);
 		}
+
+		else if (state.phase.equals("results")) {
+			displayDealerHand(state.dealerHand);
+			
+		}
+		
 		// TODO: Update Winnings text
 	}
 
@@ -463,8 +470,8 @@ public class Gui extends Application {
 				i.setImage(new Image("cardBack.jpg"));
 			}
 		} else {
-				for (ImageView iv : playerViewList) {
-					iv.setImage(getCardImage(hand.get(playerViewList.indexOf(iv))));
+				for (ImageView i : playerViewList) {
+					i.setImage(getCardImage(hand.get(playerViewList.indexOf(i))));
 				}
 			}
 		playerCardBox.getChildren().clear();
@@ -472,16 +479,18 @@ public class Gui extends Application {
 	}
 
 	void displayDealerHand(ArrayList<Card> hand) {
-		for (int i = 0; i < 3; i++) {
-			Card c = hand.get(i);
-			ImageView cardImage = new ImageView(getCardImage(c));
-			cardImage.setPreserveRatio(true);
-			cardImage.setFitWidth(90);
-
-			dealerViewList.set(i, cardImage);
+		if (hand == null) {
+			for (ImageView i : dealerViewList) {
+				i.setImage(new Image("cardBack.jpg"));
+			}
+		} else {
+			for (ImageView i : dealerViewList) {
+				i.setImage(getCardImage(hand.get(dealerViewList.indexOf(i))));
+			}
 		}
+		
 		dealerCardBox.getChildren().clear();
-		dealerCardBox.getChildren().addAll(playerViewList);
+		dealerCardBox.getChildren().addAll(dealerViewList);
 	}
 
 }

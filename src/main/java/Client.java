@@ -98,6 +98,8 @@ public class Client extends Thread{
 	}
 
 	private void displayResults() {
-		gui.updateClientUI(state);
+		Platform.runLater(() -> {
+			gui.updateClientUI(state);
+		});
 	}
 }

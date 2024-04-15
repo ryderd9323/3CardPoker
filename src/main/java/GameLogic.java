@@ -51,6 +51,7 @@ public class GameLogic {
     return false;
   }
 
+  // Returns int signifying hand rank. 0 is High Card, 5 is Straight Flush
   public int evalHand(ArrayList<Card> hand) {
     // Sort hand first
     hand.sort(new SortHand());
