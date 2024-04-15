@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class GameState implements Serializable {
   ArrayList<Card> playerHand, dealerHand;
   int pairPlus, ante, currentFunds, antePayout, playPayout, pairPlusPayout;
-  String phase, whoWon;
+  String phase, whoWon, resultString;
   boolean fold;
 
   GameState() {

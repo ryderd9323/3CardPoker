@@ -156,11 +156,13 @@ public class Server {
 
 			state.currentFunds += (state.antePayout + state.playPayout + state.pairPlusPayout);
 			state.phase = "results";
-			
+			state.resultString = "Finished hand! Winner: " + state.whoWon + "\nPlayer's hand rank: " + logic.handRanks.get(playerRank) + ". Dealer's hand rank: " + logic.handRanks.get(dealerRank) + ".";
+
+
 			// send to Client
 			try {
 				out.writeObject(state);
-				callback.accept("Finished hand! Winner: " + state.whoWon + ". Player's hand rank: " + logic.handRanks.get(playerRank) + ". Dealer's hand rank: " + logic.handRanks.get(dealerRank) + ".");
+				callback.accept(state.resultString);
 				callback.accept("Payouts\n\tAnte: $" + String.valueOf(state.antePayout) + " | Play: $" + String.valueOf(state.playPayout) + " | Pair+: $" + String.valueOf(state.pairPlusPayout));
 			} catch (Exception e) {
 				callback.accept("Couldn't send results to client #" + count);

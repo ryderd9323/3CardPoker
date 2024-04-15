@@ -441,7 +441,10 @@ public class Gui extends Application {
 
 		else if (state.phase.equals("results")) {
 			displayDealerHand(state.dealerHand);
-			
+			messageText.setText(state.resultString);
+			messageText.setText(messageText.getText() + "\nPayouts\nAnte: $" + String.valueOf(state.antePayout) + " | Play: $" + String.valueOf(state.playPayout) + " | Pair+: $" + String.valueOf(state.pairPlusPayout));
+
+			// TODO: set up for new hand (enable/disable buttons, etc)
 		}
 		
 		// TODO: Update Winnings text
