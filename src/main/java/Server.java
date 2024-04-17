@@ -127,7 +127,6 @@ public class Server {
 			// Must be Queen High or better
 			if (dealerRank < 1 && state.dealerHand.get(0).value < 12) {
 				state.whoWon = "No one (invalid Dealer hand)";
-
 				state.antePayout = 2*state.ante;
 				state.playPayout = 0;
 			} else if (dealerRank < playerRank) {
@@ -142,15 +141,27 @@ public class Server {
 				state.playPayout = 0;
 			} else if (dealerRank == playerRank) {
 				// Whoever has high card wins
-				if (state.dealerHand.get(0).value > state.playerHand.get(0).value) {
-					// Dealer has High
-					state.whoWon = "Dealer";
-					state.antePayout = 0;
-					state.playPayout = 0;
-				} else {
-					state.whoWon = "Player";
+				int i;
+				for (i = 0; i < 3; i++) {
+					if (state.dealerHand.get(i).value > state.playerHand.get(i).value) {
+						// Dealer wins
+						state.whoWon = "Dealer";
+						state.antePayout = 0;
+						state.playPayout = 0;
+						break;
+					} else if (state.dealerHand.get(i).value < state.playerHand.get(i).value) {
+						// Player wins
+						state.whoWon = "Player";
+						state.antePayout = 2*state.ante;
+						state.playPayout = state.antePayout;
+						break;
+					}
+					// If ith cards in both hands are equal value, check the next one 
+				}
+				if (i == 3) {
+					state.whoWon = "No one (equal hands)";
 					state.antePayout = 2*state.ante;
-					state.playPayout = state.antePayout;
+					state.playPayout = 0;
 				}
 			}
 

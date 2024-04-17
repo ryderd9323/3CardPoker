@@ -37,13 +37,14 @@ import javafx.stage.WindowEvent;
 public class Gui extends Application {
 	// UI elements and containers
 	ArrayList<ImageView> dealerViewList, playerViewList;
-	Button serverButton, clientButton, serverStartButton, clientStartButton, foldBtn, playBtn, dealBtn;
-	GridPane selectGrid;
-	HBox selectBox, dealerCardBox, playerCardBox;
+	Button serverButton, clientButton, serverStartButton, clientStartButton, foldBtn, playBtn, dealBtn, newHandBtn;
+	GridPane selectGrid, wagerGrid;
+	HBox selectBox, dealerCardBox, playerCardBox, playerRow;
 	ListView<String> serverLog;
 	Spinner<Integer> pairPlusSpinner, anteSpinner;
 	TextField clientPortField, serverPortField, pWagerField;
 	Text winningsText, messageText;
+	VBox playerHandArea;
 
 	HashMap<String, Scene> sceneMap;
 
@@ -258,7 +259,18 @@ public class Gui extends Application {
 
 		dealBtn.setOnAction(e -> {
 			dealBtn.setDisable(true);
+			anteSpinner.setDisable(true);
+			pairPlusSpinner.setDisable(true);
 			clientConnection.sendWagers(pairPlusSpinner.getValue(), anteSpinner.getValue());
+		});
+
+		// New Hand button
+		newHandBtn = new Button("New Hand");
+		newHandBtn.setPrefSize(218, 100);
+		newHandBtn.setFont(new Font(20));
+
+		newHandBtn.setOnAction(e -> {
+			clientConnection.newHand();
 		});
 
 		// Fold button
@@ -278,6 +290,8 @@ public class Gui extends Application {
 		playBtn.setDisable(true);
 
 		playBtn.setOnAction(e -> {
+			foldBtn.setDisable(true);
+			playBtn.setDisable(true);
 			clientConnection.playHand();
 		});
 
@@ -298,10 +312,8 @@ public class Gui extends Application {
 		Menu options = new Menu("Options");
 		MenuBar menuBar = new MenuBar();
 
-		GridPane wagerGrid;
 		Text dealerHandText, playerHandText;
-		HBox playerRow;
-		VBox dealerArea, playerHandArea, messageBox;
+		VBox dealerArea, messageBox;
 		//ArrayList<Card> dealerHand, playerHand;
 		//Image cardBack = new Image("cardBack.jpg");
 		
@@ -383,11 +395,15 @@ public class Gui extends Application {
 		playerCardBox = new HBox(30);
 		playerCardBox.setAlignment(Pos.CENTER);
 		playerCardBox.getChildren().addAll(playerViewList);
+		
 		winningsText = new Text("$1000");
+		winningsText.setStyle("-fx-font-size: 32");
+		winningsText.setFill(Color.WHITE);
+		winningsText.setTextAlignment(TextAlignment.CENTER);
 		
 		displayPlayerHand(null);
 
-		playerHandArea.getChildren().addAll(playerHandText, playerCardBox);
+		playerHandArea.getChildren().addAll(playerHandText, playerCardBox, winningsText);
 
 		playerRow = new HBox(50, wagerGrid, playerHandArea);
 		playerRow.setAlignment(Pos.CENTER);
@@ -421,19 +437,25 @@ public class Gui extends Application {
 	void updateClientUI(Serializable data) {
 		GameState state = (GameState) data;
 
+		winningsText.setText("$" + String.valueOf(state.currentFunds));
 		if (state.phase.equals("newHand")) {
-			displayPlayerHand(null);
-			anteSpinner = new Spinner<>(50, 10000, 50, 10);
-			pairPlusSpinner = new Spinner<>(50, 10000, 0, 10);
+			//displayPlayerHand(null);
+			//displayDealerHand(null);
+			//anteSpinner = new Spinner<>(0, state.currentFunds, 50, 10);
+			//pairPlusSpinner = new Spinner<>(0, state.currentFunds, 0, 10);
+			//wagerGrid.add(dealBtn, 0, 1, 2, 1);
 
-			foldBtn.setDisable(true);
-			playBtn.setDisable(true);
-			dealBtn.setDisable(false);
+			wagerGrid = createwagerGrid();
+			playerRow.getChildren().clear();
+			playerRow.getChildren().addAll(wagerGrid, playerHandArea);
+			displayPlayerHand(null);
+			displayDealerHand(null);
 
 			messageText.setText("New hand!");
 		}
 
 		else if (state.phase.equals("displayPlayer")) {
+			messageText.setText("Fold, or bet a Play wager equal to your ante to play the hand out");
 			displayPlayerHand(state.playerHand);
 			foldBtn.setDisable(false);
 			playBtn.setDisable(false);
@@ -441,10 +463,9 @@ public class Gui extends Application {
 
 		else if (state.phase.equals("results")) {
 			displayDealerHand(state.dealerHand);
-			messageText.setText(state.resultString);
-			messageText.setText(messageText.getText() + "\nPayouts\nAnte: $" + String.valueOf(state.antePayout) + " | Play: $" + String.valueOf(state.playPayout) + " | Pair+: $" + String.valueOf(state.pairPlusPayout));
+			messageText.setText(state.resultString + "\nPayouts\nAnte: $" + String.valueOf(state.antePayout) + " | Play: $" + String.valueOf(state.playPayout) + " | Pair+: $" + String.valueOf(state.pairPlusPayout));
 
-			// TODO: set up for new hand (enable/disable buttons, etc)
+			wagerGrid.add(newHandBtn, 0, 1, 2, 1);
 		}
 		
 		// TODO: Update Winnings text

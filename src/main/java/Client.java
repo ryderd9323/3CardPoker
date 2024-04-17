@@ -58,7 +58,9 @@ public class Client extends Thread{
 		if (phase.equals("displayPlayer")) {
 			displayHand();
 		} else if (phase.equals("results")) {
-			displayResults();
+			Platform.runLater(() -> {
+				gui.updateClientUI(state);
+			});
 		}
 	}
 
@@ -76,7 +78,6 @@ public class Client extends Thread{
 
 	public void displayHand() {
 		Platform.runLater(() -> {
-			gui.updateClientMessage("Fold or play!");
 			gui.updateClientUI(state);
 		});
 	}
@@ -94,10 +95,6 @@ public class Client extends Thread{
 
 	public void newHand() {
 		state.phase = "newHand";
-		gui.updateClientUI(state);
-	}
-
-	private void displayResults() {
 		Platform.runLater(() -> {
 			gui.updateClientUI(state);
 		});
