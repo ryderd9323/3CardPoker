@@ -29,14 +29,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NYXCF7FO7gEYAJfp4YZz7OlsKIMoVhGknEdff/iFx+o=
+			pc9Qz0eKz9gcoA5hGwNha4WrdHHlqjYAKfCp01sB4g0=
 			</data>
 		</dict>
 		<key>app/Poker-0.0.1-SNAPSHOT.jar</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qn+bK+sVWF2GWAnJuUjXVBoWd2eun8XqaZFgl6JP6tY=
+			oQSJ1l1uwC2ecJiuqyno8zvztuPdR2pBZ6QDyiP6RXw=
 			</data>
 		</dict>
 		<key>app/Poker3.cfg</key>
@@ -50,84 +50,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8xYdrkEZZ9sRRJHtBV+u0hoiTRrExb7+nL2TD2zv6t8=
+			c8FpTf/Dyf6Kx/eu8EiiA6WxEGc0PBa1OP6gzWZON9k=
 			</data>
 		</dict>
 		<key>app/classes/Client.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			a8Sk2Fp+frbulH5sODYuZR9eAYh0o/qCo0dBlQ863ps=
+			v7ESwEG4THEd0C2NjIDNewniK61M9usw9L+XIOf4wQg=
 			</data>
 		</dict>
 		<key>app/classes/Dealer$1.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U7gLUjXEMxpHz9Du9c2jHO3boPuYBB27GcrwKF1hyJk=
+			6CfYvnZvIF/2zIb671hkf3XvIWSvaqsNBYJIe7V22iI=
 			</data>
 		</dict>
 		<key>app/classes/Dealer.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yUhNFboOy8Z1/s4hcr8eGe+6t94M19AKQAZSsRG4u+I=
+			Ajt0zc8U0CbtAMEfM1k54IL/qOe0JAgX2hX4AkdryE0=
 			</data>
 		</dict>
 		<key>app/classes/GameLogic$1.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/FsIcwaJpTshJCR69hT8wZOJIFw//PdKHlRfBVP9wjc=
+			CUmbGSS4i3IauQWlRi3beSlFAJS+zFIPzw1ND5qLGXk=
 			</data>
 		</dict>
 		<key>app/classes/GameLogic$SortHand.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iySsM+/DxfRtSeidgUeFhkQMNXdIm788s02A4nmzlcI=
+			0905e5BKl2wLFoXOuUEbVuEZAEApxqYVgHm0v9CvshU=
 			</data>
 		</dict>
 		<key>app/classes/GameLogic.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5oNDMFqbByqjZc8htwKuMZe1hdydPtTR/THsWxMYH2E=
+			fgbwiJGXzb+Ge1sY7STRaMVMAYTuhj34nS5JxJfxlvg=
 			</data>
 		</dict>
 		<key>app/classes/GameState.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mk59Dceogpx1XUhlA13lbzLK2wmPSCJMO9yEeBqKB4M=
+			4cnJgUe0iLmr8MZwRuVUtA2Fsi6Q5tomcF+ndoJWQDM=
 			</data>
 		</dict>
 		<key>app/classes/Gui$1.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qDhtNpqR1ahVwt0s0jP92GON1Mb7WjSVYW/e3XVu/XE=
+			QscNCjdeyy3yLFpX+YfaG+Z4cBqd8QnHJfQyDeRy9BM=
 			</data>
 		</dict>
 		<key>app/classes/Gui$2.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/BBHCkg0IGO3ik+aCECQGlztnwCyuUEmBGchHrOOnts=
+			AFoWyfIAnmChvn8dPjsXWUR6fjkitMUFu9Vi4pKyihk=
 			</data>
 		</dict>
 		<key>app/classes/Gui$3.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5PF+y1kaLsCu4gINyQVUlGtNz73wIYCtcUYY6Fok78w=
+			8tkByUdfRCR/S3z78bImqZvr7xTCpSeKpnbSL1ooxPs=
 			</data>
 		</dict>
 		<key>app/classes/Gui.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VK5xnN0ydOfdk+J9l+fdcTcGZJBSPB4OD7f9hZ6m3HU=
+			2IGF9jQBQOGBksOUAonZ9xK7keCjM81rs/ReLrlrcvs=
 			</data>
 		</dict>
 		<key>app/classes/PNG-cards-1.3/10Clubs.png</key>
@@ -505,21 +505,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jrxg8t87vw1gjZN4EPQubqyALi6puWO/3trtI0dVhCA=
+			/YPsgWIs6Ci7jIUUrmUuJho19MwgeaPcqWi54kPv3S4=
 			</data>
 		</dict>
 		<key>app/classes/Server$ListenerThread.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CgcLlWxGh0u8NXvqPyobyE3orFraqUPScz8JCi3dr1A=
+			xt3J9/EPopvnIFIyNyBTsqcYpwDBfcaohlACmqTpXYA=
 			</data>
 		</dict>
 		<key>app/classes/Server.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jEOsYAFaW0g0zy0k6Av51laPCI7vnHOXClyCFlrxGmg=
+			0fD7+ZVDVhCPodyYX4db75RBzcl1FPbqa7NDNffBPlw=
 			</data>
 		</dict>
 		<key>app/classes/cardBack.jpg</key>
@@ -527,6 +527,13 @@
 			<key>hash2</key>
 			<data>
 			fW5aIf071MVCqHsG7KqjSJctsw9kRv2dP5CGxwKE36Y=
+			</data>
+		</dict>
+		<key>app/classes/casino-style.css</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7jhkSCrtRMs9l20Ln+sUqoJbHJU/YzwqW3f13b6Tl9M=
 			</data>
 		</dict>
 		<key>app/maven-archiver/pom.properties</key>
@@ -568,112 +575,112 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YZhYGgjM80maZQISdQVQ8U6uAcRpsOIw2bnmRS5/dMY=
+			BY6CEct1lkkq90y9Ft41bWxaXkPBtfz28mnYmdZj1VQ=
 			</data>
 		</dict>
 		<key>app/surefire-reports/GameLogicTest.txt</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HgW8ZDJkZx0kcBMQONnXI/MY8724aW5EUrmhd6UY2TE=
+			Fm+lJ6pCUnnNtJvIBBsa+ZvxIvDsiEyOZulmRPegoqk=
 			</data>
 		</dict>
 		<key>app/surefire-reports/TEST-DealerTest.xml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DRFV2WibdewonXLQVXiPCHPJ0aQ89WH7TXG1Urc6bkw=
+			eXiVza9xeQxK+QK+i00Qw3IoZqZzJt9TmbUiWw1kwzw=
 			</data>
 		</dict>
 		<key>app/surefire-reports/TEST-GameLogicTest.xml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F6sS3J5bR9q3mH3F1+eBSTObAjHbvYYHLCOos/xCn9E=
+			rxWC1Dogg61tledHdq2bAHCqe8g6bPTWWF1oacyUOsg=
 			</data>
 		</dict>
 		<key>app/test-classes/DealerTest$1.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hjWNu+ESnTXNk380xqK3UxCfpAuQb75YG5V7ckvW8cI=
+			No4fDmHlfy8e2e859QoXAwje/ZDq4zvi4Io4rWBvS8s=
 			</data>
 		</dict>
 		<key>app/test-classes/DealerTest.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vneIjhOSeyWOILP3jRA6wtZeSEniWp7eiHxygY2XBfQ=
+			tTm6oe0+A+9Q5CAykSuoyYPz/F0amrUYXRfYvAnbMNk=
 			</data>
 		</dict>
 		<key>app/test-classes/GameLogicTest$1.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZvGu6HH0CElE9oV+qlUERe8ZMCgYBW1CGo173g1MCRE=
+			POYPeUn2JbxGQ/1yvFksIba4H9TlPKjNtLH+wqdWJtI=
 			</data>
 		</dict>
 		<key>app/test-classes/GameLogicTest$2.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tnRn6tTPU/9l4sySev92WFObi7foHECMak0+Wq7z+IE=
+			5h7lckRYJ2XIlZoMqDSQUlpn/L1MLZFFnBLOIxL6B8A=
 			</data>
 		</dict>
 		<key>app/test-classes/GameLogicTest$3.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FgxYiwUJ3Vcm94nl93MPSr27oe1tZ7l72QHazNaZFQs=
+			qUD1qys2bgMYu9/bKnePEp1ArmAg/QVBkgLR8Gmcz/E=
 			</data>
 		</dict>
 		<key>app/test-classes/GameLogicTest$4.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BBmSQ2M0vSt4Ues+2xP3/bdzLwEqJLYiwF6YgYGu8xk=
+			nDAPTZ3fxVGz02Ri/SG3e8w5qCNDnfMRcVdAWKMpqFA=
 			</data>
 		</dict>
 		<key>app/test-classes/GameLogicTest$5.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hf86VYZ0W4IjxzBQR8y9kblM1asLMPAMoZL+iyjLTC0=
+			c73EzXeRLEzv3KBz+Tx3+EAIKSwQ+mZjEVVminhyvh4=
 			</data>
 		</dict>
 		<key>app/test-classes/GameLogicTest$6.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bmi1ak64/443WvtFmB/Qim10J6CJoqicwM+pPVNMXlM=
+			C4TIPArbNYEpRRO+5ljHmkXN6/s4gY3z/T3Y2IehnsI=
 			</data>
 		</dict>
 		<key>app/test-classes/GameLogicTest$7.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AQybigyYmJO4y2kZJfsP3qvfrpZkmVFrG4c6OlngQyQ=
+			gioAIFiDZvUhPkjTjj+oF1DxfiP8p7kt13gBePtft/c=
 			</data>
 		</dict>
 		<key>app/test-classes/GameLogicTest$8.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u1BBJlIxV3JO1340dGoDeUciV2ZEu2x8U973DTFKcVg=
+			eq80+S6ujc+WrmyJ8zQqqF/sHM+BkTey27Nr3f+wMmc=
 			</data>
 		</dict>
 		<key>app/test-classes/GameLogicTest$9.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vdhpibwX8gxAMndbOYjWZW4mvhIHpLMRUWIy7/sayWM=
+			KMCBRtUb66+syOZ4EkuykPI/nFg+gooj1EPdaSu02Eg=
 			</data>
 		</dict>
 		<key>app/test-classes/GameLogicTest.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MdYraDP1DEVzK/aCip/Bt5YXdZ3VUt3Kxa7d4iOVhQs=
+			TL3GBTXIpcIrAmyUjvRJzgmAapo5F1z59+C2K6/5XJ8=
 			</data>
 		</dict>
 		<key>runtime/Contents/Home/bin/java</key>

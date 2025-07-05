@@ -1,0 +1,68 @@
+
+/* Root background */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    -fx-font-family: "Georgia", serif;
+    -fx-font-size: 16px;
+}
+
+/* Labels (like "Dealer Hand", "Player Hand") */
+.label {
+    -fx-text-fill: #f5e7c0;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #000000, 2, 0.3, 1, 1);
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #4b3621, #2c1e10);
+    -fx-text-fill: #f5e7c0;
+    -fx-font-weight: bold;
+    -fx-border-color: gold;
+    -fx-border-width: 2px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #5c4026, #3d2915);
+    -fx-effect: dropshadow(gaussian, gold, 5, 0.6, 0, 0);
+}
+
+/* Spinner */
+.spinner {
+    -fx-background-color: #333333;
+    -fx-border-color: gold;
+    -fx-border-width: 1px;
+}
+.spinner .text-field {
+    -fx-text-fill: #f5e7c0;
+    -fx-background-color: #222222;
+}
+
+/* Text fields (if any) */
+.text-field {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #f5e7c0;
+    -fx-border-color: gold;
+    -fx-border-width: 1px;
+}
+
+/* Card containers */
+.image-view {
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 2, 2);
+}
+
+/* Message bar */
+#messageBar {
+    -fx-background-color: rgba(255, 215, 0, 0.05);
+    -fx-border-color: #f5e7c0;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+    -fx-text-fill: #f5e7c0;
+}
+
+/* Scene layout containers */
+.hbox, .vbox {
+    -fx-spacing: 12px;
+}

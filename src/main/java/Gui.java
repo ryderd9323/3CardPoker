@@ -11,6 +11,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
@@ -34,6 +35,7 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
+
 public class Gui extends Application {
 	// UI elements and containers
 	ArrayList<ImageView> dealerViewList, playerViewList;
@@ -54,13 +56,11 @@ public class Gui extends Application {
 
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		launch(args);
 	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		// TODO Auto-generated method stub
 		primaryStage.setTitle("Three Card Poker!");
 
 		sceneMap = new HashMap<>();
@@ -197,11 +197,6 @@ public class Gui extends Application {
 
 		return new Scene(root, 800, 600);
 	}
-
-	// TODO: Play screens
-	// TODO: GameLogic class
-	// TODO: updateServerUI()
-	// TODO: updateClientUI()
 	
 	public Scene createLogScene() {
 		Text clientsConnectedText = new Text("Clients connected: ");
@@ -223,13 +218,15 @@ public class Gui extends Application {
 		Text anteText, pairPlusText;
 
 		// CSS Style strings
-		String boxStyle = "-fx-border-color: #000; -fx-border-width: 5";
-		String textStyle = "-fx-font-size: 20; -fx-font-family: serif;";		
+		// String boxStyle = "-fx-border-color: #000; -fx-border-width: 5";
+		String textStyle = "-fx-font-size: 20; -fx-font-family: serif; -fx-text-fill: #f5e7c0;";	
+		Color textColor = new Color(0.96, 0.906, 0.75, 1);
 
 		// Ante box
 		anteText = new Text("Ante/Play");
 		anteText.setTextAlignment(TextAlignment.CENTER);
 		anteText.setStyle(textStyle);
+		anteText.setFill(textColor);
 
 		anteSpinner = new Spinner<>(50, 10000, 50, 10);
 		VBox.setMargin(anteSpinner, new Insets(0, 10, 0, 10));
@@ -237,20 +234,21 @@ public class Gui extends Application {
 		anteBox = new VBox(20, anteText, anteSpinner);
 		anteBox.setAlignment(Pos.CENTER);
 		anteBox.setPrefSize(120, 100);
-		anteBox.setStyle(boxStyle);
+		// anteBox.setStyle(boxStyle);
 
 		// Pair+ box
 		pairPlusText = new Text("Pair+");
 		pairPlusText.setTextAlignment(TextAlignment.CENTER);
 		pairPlusText.setStyle(textStyle);
+		pairPlusText.setFill(textColor);
 
 		pairPlusSpinner = new Spinner<>(0, 10000, 0, 10);
-		VBox.setMargin(pairPlusSpinner, new Insets(0, 10, 0, 10));
+		// VBox.setMargin(pairPlusSpinner, new Insets(0, 10, 0, 10));
 
 		pairPlusBox = new VBox(20, pairPlusText, pairPlusSpinner);
 		pairPlusBox.setAlignment(Pos.CENTER);
 		pairPlusBox.setPrefSize(120, 100);
-		pairPlusBox.setStyle(boxStyle);
+		// pairPlusBox.setStyle(boxStyle);
 
 		// Deal button
 		dealBtn = new Button("Deal");
@@ -307,22 +305,22 @@ public class Gui extends Application {
 	}
 
 	public Scene createPlayScene() {
+		
 		// Menu bar stuff
 		MenuItem exit = new MenuItem("Exit");
 		Menu options = new Menu("Options");
 		MenuBar menuBar = new MenuBar();
 
-		Text dealerHandText, playerHandText;
+		Label dealerHandLabel, playerHandLabel;
 		VBox dealerArea, messageBox;
-		//ArrayList<Card> dealerHand, playerHand;
-		//Image cardBack = new Image("cardBack.jpg");
+
+		Color textColor = new Color(0.96, 0.906, 0.75, 1);
 		
 		// UI elements that will need to change
-
-		ImageView cardBack = new ImageView("cardBack.jpg");
-		cardBack.setPreserveRatio(true);
-		cardBack.setFitWidth(90);
-		cardBack.setSmooth(true);
+		// ImageView cardBack = new ImageView("cardBack.jpg");
+		// cardBack.setPreserveRatio(true);
+		// cardBack.setFitWidth(90);
+		// cardBack.setSmooth(true);
 
 		exit.setOnAction(e -> Platform.exit());
 
@@ -332,10 +330,15 @@ public class Gui extends Application {
 		// Dealer hand area
 		dealerArea = new VBox(8);
 
-		dealerHandText = new Text("Dealer Hand");
+		dealerHandLabel = new Label("Dealer Hand");
+		dealerHandLabel.setId("handLabel");
+		dealerHandLabel.setTextAlignment(TextAlignment.CENTER);
+		dealerHandLabel.setStyle("-fx-font-size: 48px");
+
+		/* dealerHandText = new Text("Dealer Hand");
 		dealerHandText.setStyle("-fx-font-size: 64");
-		dealerHandText.setFill(Color.WHITE);
-		dealerHandText.setTextAlignment(TextAlignment.CENTER);
+		dealerHandText.setFill(textColor);
+		dealerHandText.setTextAlignment(TextAlignment.CENTER); */
 
 		// Container for Dealer's card images
 		dealerViewList = new ArrayList<>(){
@@ -358,12 +361,8 @@ public class Gui extends Application {
 
 		displayDealerHand(null);
 
-		dealerArea.getChildren().addAll(dealerHandText, dealerCardBox);
+		dealerArea.getChildren().addAll(dealerHandLabel, dealerCardBox);
 		dealerArea.setAlignment(Pos.CENTER);
-		/*
-		dealerArea = new VBox(8, dealerHandText, dealerCardBox);
-		dealerArea.setAlignment(Pos.CENTER);
-		*/
 
 		// Player Area - contains wager boxes, winning box, 
 		wagerGrid = createwagerGrid();
@@ -372,10 +371,9 @@ public class Gui extends Application {
 		playerHandArea = new VBox(8);
 		playerHandArea.setAlignment(Pos.CENTER);
 
-		playerHandText = new Text("Player Hand");
-		playerHandText.setStyle("-fx-font-size: 64");
-		playerHandText.setFill(Color.WHITE);
-		playerHandText.setTextAlignment(TextAlignment.CENTER);
+		playerHandLabel = new Label("Player Hand");
+		playerHandLabel.setId("handLabel");
+		playerHandLabel.setTextAlignment(TextAlignment.CENTER);
 		
 		// Hand List
 		playerViewList = new ArrayList<>() {
@@ -398,12 +396,12 @@ public class Gui extends Application {
 		
 		winningsText = new Text("$1000");
 		winningsText.setStyle("-fx-font-size: 32");
-		winningsText.setFill(Color.WHITE);
+		winningsText.setFill(textColor);
 		winningsText.setTextAlignment(TextAlignment.CENTER);
 		
 		displayPlayerHand(null);
 
-		playerHandArea.getChildren().addAll(playerHandText, playerCardBox, winningsText);
+		playerHandArea.getChildren().addAll(playerHandLabel, playerCardBox, winningsText);
 
 		playerRow = new HBox(50, wagerGrid, playerHandArea);
 		playerRow.setAlignment(Pos.CENTER);
@@ -411,19 +409,19 @@ public class Gui extends Application {
 
 		// Message area
 		messageText = new Text("Messages go here");
-		messageText.setTextAlignment(TextAlignment.CENTER);
-		messageText.setFont(new Font("Helvetica", 24));
+		messageText.setFill(textColor);
 		
 		messageBox = new VBox(messageText);
+		messageBox.setId("messageBar");
 		messageBox.setPrefSize(680, 130);
-		messageBox.setStyle("-fx-background-color: #A1A1A1");
 		messageBox.setAlignment(Pos.CENTER);
 
 		VBox root = new VBox(20);
-		root.setStyle("-fx-background-color: #95FFD2"); // #0FFEC2
 		root.getChildren().addAll(menuBar, dealerArea, messageBox, playerRow);
 
-		return new Scene(root, 800, 800);
+		Scene scene = new Scene(root, 800, 800);
+		scene.getStylesheets().add(getClass().getResource("/casino-style.css").toExternalForm());
+		return scene;
 	}
 
 	// Update functions

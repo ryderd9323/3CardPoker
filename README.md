@@ -1,1 +1,1 @@
-Networked + multi-threaded 3-card poker game written in Java and JavaFX.
+Networked, multi-threaded poker game allowing concurrent play. Built with Java and JavaFX with a custom CSS theme, and tested using JUnit. Features a custom card deck and a simple AI dealer, and basic game logic for 3-Card Poker.
