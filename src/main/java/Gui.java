@@ -177,8 +177,8 @@ public class Gui extends Application {
 	}
 
 	public Scene createClientPortScene() {
-		Text portText = new Text("Port Number");
-		portText.setStyle("-fx-font-size: 36");
+		Label portLabel = new Label("Port Number");
+		portLabel.setStyle("-fx-font-size: 36");
 
 		clientPortField = new TextField();
 		clientPortField.setPrefSize(150, 50);
@@ -189,13 +189,15 @@ public class Gui extends Application {
 		clientStartButton.setPrefSize(150, 50);
 		clientStartButton.setFont(new Font(20));
 		
-		VBox root = new VBox(10, portText, clientPortField, clientStartButton);
+		VBox root = new VBox(10, portLabel, clientPortField, clientStartButton);
 		root.setAlignment(Pos.CENTER);
-		root.setPadding(new Insets(0, 0, 0, 0));
+		//root.setPadding(new Insets(0, 0, 0, 0));
 		VBox.setMargin(clientStartButton, new Insets(62));
-		root.setStyle("-fx-background-color: #95FFD2");
+		//root.setStyle("-fx-background-color: #95FFD2");
 
-		return new Scene(root, 800, 600);
+		Scene scene = new Scene(root, 800, 600);
+		scene.getStylesheets().add(getClass().getResource("/casino-style.css").toExternalForm());
+		return scene;
 	}
 	
 	public Scene createLogScene() {
