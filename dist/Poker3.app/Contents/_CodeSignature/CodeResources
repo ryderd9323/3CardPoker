@@ -29,14 +29,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			50Txatp1Ugv88IEiozlrSdZ9EmYcqY6eAr8ZozsSpfM=
+			9JRmdI3gfCem2fGSqn7Zojo6jWnRnPLtcFpeUxZpl0E=
 			</data>
 		</dict>
 		<key>app/Poker-0.0.1-SNAPSHOT.jar</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q9PKO64PhSk8wkoGALmOzaP5BgbrqMhqSA8bt+Yr53I=
+			oOmpjVHETAWlTIkuoxL9RsLXZyhoDhdRK3yXV/H79dM=
 			</data>
 		</dict>
 		<key>app/Poker3.cfg</key>
@@ -113,21 +113,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2/hoLyQgu34KkyyfqraIaY24H8uHqO+gnlya/LWXfjQ=
+			zmCVumK9dX21x/k6FrpEHVaiBIoHmnDq4tDFgIM0fmI=
 			</data>
 		</dict>
 		<key>app/classes/Gui$3.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r4QSRzGuz9IfTq7CL71//YZH4kyp/Ijdj69nCFn1UgI=
+			aG6aJO5xm9Ncx5JA5jDjShMptDRn+47hsZy9qHHVWVo=
 			</data>
 		</dict>
 		<key>app/classes/Gui.class</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zDqeVosRI2deAQjZIhNxr6q81DsPRl3byxACLakF8Kw=
+			lRfDdRm7jdriU9ZUE124S4Hg+/AxMVw634N1L2tXaAM=
 			</data>
 		</dict>
 		<key>app/classes/PNG-cards-1.3/10Clubs.png</key>
@@ -533,7 +533,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7jhkSCrtRMs9l20Ln+sUqoJbHJU/YzwqW3f13b6Tl9M=
+			YsFkkekUJoxgSlTC9npf/LJty8UJDomtARjBH1sn4FY=
 			</data>
 		</dict>
 		<key>app/maven-archiver/pom.properties</key>
@@ -575,28 +575,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PYroqJ1cFPdJQ6WHrqAK3FI6iOqp1n9O4J+fKTjkBKE=
+			OEK73vhchPa5pHylA1RpoC4al0RjWyR4XUsw0rvVWAk=
 			</data>
 		</dict>
 		<key>app/surefire-reports/GameLogicTest.txt</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dYxqCDOrUzyoglA+7EOEWeJQLs5D+HZ6oNFOqik7/R8=
+			leFD1eHi/rpGfl5HP+hO0GFCc6w2bNXKfq7zxk8FacE=
 			</data>
 		</dict>
 		<key>app/surefire-reports/TEST-DealerTest.xml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LpDkdiCyBqQsXGH1wGotZFQ9U+EAtdnOx4fIF4AoT5k=
+			ilc+rQQXDidVeCOcsSBBn1mO0DVeGrffnjijSIY/cNk=
 			</data>
 		</dict>
 		<key>app/surefire-reports/TEST-GameLogicTest.xml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/V8ZnLgl0BoBgCYydvP2qwMKK9yxbHCb1wnwg/vG45Y=
+			dwzOjerXNFWKzj4anPqzK8bt55KxRiXvQy3AofBAHRQ=
 			</data>
 		</dict>
 		<key>app/test-classes/DealerTest$1.class</key>
