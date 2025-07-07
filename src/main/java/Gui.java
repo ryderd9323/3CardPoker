@@ -5,7 +5,6 @@ import java.util.HashMap;
 
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -20,9 +19,6 @@ import javafx.scene.control.Spinner;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -302,6 +298,7 @@ public class Gui extends Application {
 		grid.addRow(0, anteBox, pairPlusBox);
 		grid.add(dealBtn, 0, 1, 2, 1);
 		grid.addRow(2, foldBtn, playBtn);
+		grid.setStyle("-fx-border-color: #f5e7c0; -fx-border-width: 1px;");
 
 		return grid;
 	}
@@ -410,8 +407,9 @@ public class Gui extends Application {
 
 
 		// Message area
-		messageText = new Text("Messages go here");
+		messageText = new Text("Welcome to Three Card Poker!\nTo start, place your ante wager and optional pair-plus wager, then click Deal.");
 		messageText.setFill(textColor);
+		messageText.setTextAlignment(TextAlignment.CENTER);
 		
 		messageBox = new VBox(messageText);
 		messageBox.setId("messageBar");

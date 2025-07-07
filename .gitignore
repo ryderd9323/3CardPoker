@@ -1,2 +1,45 @@
+# Maven output
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Build tools
+.gradle/
+build/
+bin/
+
+# IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+*.class
+
+# OS-specific
 .DS_Store
-.fake
+Thumbs.db
+
+# Logs and temp
+*.log
+*.tmp
+*.bak
+
+# JavaFX runtime images
+/dist/
+/poker-runtime/
+/*.app/
+
+# VS Code and Eclipse
+.vscode/
+*.launch
+.settings/
+
+# JavaFX packaging
+*.dmg
+*.pkg
+*.exe
+*.msi
+
+# Misc
+*.swp
+*.swo
+*.orig
