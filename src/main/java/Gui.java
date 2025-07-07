@@ -6,8 +6,11 @@ import java.util.HashMap;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.geometry.VPos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -227,12 +230,11 @@ public class Gui extends Application {
 		anteText.setFill(textColor);
 
 		anteSpinner = new Spinner<>(50, 10000, 50, 10);
-		VBox.setMargin(anteSpinner, new Insets(0, 10, 0, 10));
+		//VBox.setMargin(anteSpinner, new Insets(0, 10, 0, 10));
 
-		anteBox = new VBox(20, anteText, anteSpinner);
+		anteBox = new VBox(10, anteText, anteSpinner);
 		anteBox.setAlignment(Pos.CENTER);
 		anteBox.setPrefSize(120, 100);
-		// anteBox.setStyle(boxStyle);
 
 		// Pair+ box
 		pairPlusText = new Text("Pair+");
@@ -241,12 +243,11 @@ public class Gui extends Application {
 		pairPlusText.setFill(textColor);
 
 		pairPlusSpinner = new Spinner<>(0, 10000, 0, 10);
-		// VBox.setMargin(pairPlusSpinner, new Insets(0, 10, 0, 10));
+		//VBox.setMargin(pairPlusSpinner, new Insets(0, 10, 0, 10));
 
-		pairPlusBox = new VBox(20, pairPlusText, pairPlusSpinner);
+		pairPlusBox = new VBox(10, pairPlusText, pairPlusSpinner);
 		pairPlusBox.setAlignment(Pos.CENTER);
 		pairPlusBox.setPrefSize(120, 100);
-		// pairPlusBox.setStyle(boxStyle);
 
 		// Deal button
 		dealBtn = new Button("Deal");
@@ -294,11 +295,16 @@ public class Gui extends Application {
 		// Put em in a grid
 		// TODO: not centered or aligned
 		grid = new GridPane();
-		grid.setAlignment(Pos.CENTER);
 		grid.addRow(0, anteBox, pairPlusBox);
 		grid.add(dealBtn, 0, 1, 2, 1);
 		grid.addRow(2, foldBtn, playBtn);
-		grid.setStyle("-fx-border-color: #f5e7c0; -fx-border-width: 1px;");
+		grid.setVgap(10);
+
+		for (Node n : grid.getChildren()) {
+			GridPane.setHalignment(n, HPos.CENTER);
+			GridPane.setValignment(n, VPos.CENTER);
+		}
+		
 
 		return grid;
 	}

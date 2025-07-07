@@ -71,6 +71,8 @@
 
 /* Card containers */
 .image-view {
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
     -fx-effect: dropshadow(gaussian, black, 10, 0.5, 2, 2);
 }
 
